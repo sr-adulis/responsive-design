@@ -1,16 +1,19 @@
 body{
 	background:url(imagens/background.jpg); /*inserção da imagem de fundo em todo o site*/
-	color:#868686; /*cor padrão para todas as fontes*/
+	color: #868686; /*cor padrão para todas as fontes*/
 	font-family: "Open Sans", Helvetica, sans-serif, arial; /*definição da fonte geral incorporada do Google Fonts*/
-	font-size: 18px; /*tamanho da fonte*/
+	font-size: 1.125em; /*tamanho da fonte 18px/16px=1.125em*/
 	font-weight: 300; /*indica que a fonte está configurada como Open Sans Light*/
-	line-height: 22px;/*altura da linha*/
+	line-height: 1.22222222em;/*altura da linha 22px/18px=1.2222222222em  -- note q na linha 5 18 era o tamanho da fonte em px*/
 	text-align: left; /*alinhando o texto à esquerda*/
-	text-shadow:1px 1px 0px #fff; /*sombreamento para as fontes do site*/
+	text-shadow: 1px 1px 0px #fff; /*sombreamento para as fontes do site*/
 }
 .center{
-	margin: 0 auto; /*centralizando o conteúdo no navegador*/
-	width: 1200px; /*largura do layout*/		
+	/*margin: 0 auto;*/ /*centralizando o conteúdo no navegador*/
+	/*width: 1200px;*/ /*largura do layout*/	
+	MARGIN: 0 AUTO;
+	MAX-WIDTH:1200PX; /*LARGURA MÁXIMA DO LAYOUT*/
+	WIDTH: 100%; /*AJUSTE DO LAYOUT À TELA*/
 }
 /*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos
   evitando que os floats se aglomerem.
@@ -37,7 +40,7 @@ h1, h2{
 	line-height: 60px;
 }
 h3{
-	font-size: 32px;
+	font-size: 135%;
 	font-weight: 300;
 	letter-spacing: -2px; /*espaçamento entre as letras*/
 	line-height: 38px;
@@ -60,7 +63,7 @@ a:hover{
 header{
 	border-bottom: 1px solid #E0E0E0; /*borda na base da seção*/
 	height:150px;
-	width:1200px; /*largura do topo*/
+	width:100%; /*largura do topo*/
 }
 /*
 =========================
@@ -71,9 +74,9 @@ header h1 a{
 		background:url(imagens/logo-criar-site-responsivo.png) no-repeat; /*logotipo*/
 		display:block; /*torna o link como um bloco, um retângulo*/
 		float:left; /*posiciona o logotipo à esquerda do site*/
-		height:139px; /*altura da imagem*/
+		min-height:139px; /*altura da imagem*/
 		text-indent:-9999; /*recuo para ocultar texto à esquerda*/
-		width:302px; /*largura da imagem*/
+		width:30%; /*largura da imagem*/
 	}
 	
 /*
@@ -93,6 +96,7 @@ nav ul{
 }
 	nav li {
 		display: inline; /*deixa o menu na horizontal*/
+		float:left;
 	}
 		nav ul li a{
 			margin-right: 30px; /*espaço à direita de cada link do menu*/
@@ -119,7 +123,7 @@ Seção .CHAMADA ========================================
 .chamada{
 	height:290px;
 	text-align:center;
-	width:1200px;
+	width:100%;
 }
 	h2 span{
 		font-size: 60px;
@@ -129,7 +133,7 @@ Seção .CHAMADA ========================================
 	}
 	.chamada h3 {
 		margin: 0 auto;
-		width:900px;
+		width:75%;
 	}
 	
 /*----------------------------------------------------------
@@ -672,4 +676,61 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+}
+@media screen and (max-width: 480px) {
+	nav ul {
+		float:left;
+		margin:0px 0px 0px 100px;
+	}
+	nav li {
+		display:block;
+		float:none;
+		text-align:left;
+	}
+	h1 span a {
+		font-size:50px;
+	}
+	header h1 a{
+		background:url(imagens/logo-criar-site-responsivo.png) no-repeat; /*logotipo*/
+		display:block; /*torna o link como um bloco, um retângulo*/
+		float:none; /*posiciona o logotipo à esquerda do site*/
+		height:139px; /*altura da imagem*/
+		/*text-indent:-9999; /*recuo para ocultar texto à esquerda*/
+		width:100%; /*largura da imagem*/
+		text-align:center;
+		margin:0 auto;
+	}
+	header h1 {
+		margin:0 auto;
+		text-align:center;
+	}
+	h1, h2{
+	color:#FE9380;
+	font-size: 29px;
+	font-weight: 800;
+	letter-spacing: -3px; /*espaçamento entre as letras*/
+	line-height: 60px;
+}
+h2 span{
+		font-size: 28px;
+		font-weight: 300;
+		letter-spacing: -2px;
+		line-height: 60px;
+	}
+	.chamada{
+	height:290px;
+	text-align:center;
+	width:100%;
+	}
+	.chamada h3 {
+		margin: 0 auto;
+		width:75%;
+	}
+	footer{
+	clear:both;
+	height: 50px;
+	padding: 10px 0px;
+	width:100%;
+	}
+
 }

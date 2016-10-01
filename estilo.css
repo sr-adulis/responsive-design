@@ -310,7 +310,8 @@ Media Queries <<<<<=========================================
 @media screen and (max-width:768px){
 /*cores dos links e H2*/
 	h2, a, a:link, a:visited{
-	color:#FBCA61; 
+	color:#FBCA61;
+	margin-bottom: 5px;
 }
 	a:hover{
 		color:#F9AD0F;
@@ -347,7 +348,7 @@ Media Queries <<<<<=========================================
 /*.container*/
 	.container{
 		background-color:#fbca61;
-		height: 380px;
+		height: 440px;
 		padding:3.90625%; /* 30px Ã· 768px = 0.025 x 100 = 2.5%*/
 		width:92.1875%; /* 100% (768px) - 7.8125% de padding (direita e esquerda) = 92.1875%*/
 	}
@@ -365,7 +366,7 @@ Media Queries <<<<<=========================================
 		}
 		.container p{
 			font-size: 0.7777777778em; /*14px Ã· 18px*/
-			height:140px;
+			height:197px;
 			line-height: 1.1428571428em; /*16px Ã· 14px*/
 			padding: 2.9166666667%; /* 7px Ã· 240px */
 			top: 215px;
@@ -385,7 +386,7 @@ Media Queries <<<<<=========================================
 /* 
 480px â€“ Smartphones no formato paisagem com tela pequena
 ***********************************************************/
-@media screen and (max-width:480px){
+@media screen and (max-width:566px){
 /*Geral*/
 *{
 	margin:0;
